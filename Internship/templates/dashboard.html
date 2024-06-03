@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maia Digital | Dashboard {{ session['username'] }}</title>
+    <link href="{{ url_for('static', filename='css/dashboard.css') }}" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Maia Digital</h1>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul class="navbar">
+                <li class="active"><a href="/dashboard">Dashboard</a></li>
+                <li><a href="/">Beranda</a></li>
+                <li><a href="/logout">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    
+
+    <section id="home">
+        <div class="container">
+            {% if 'username' in session %}
+                <h2 class="Selamat">Selamat datang di User Dashboard {{ session['username'] }}</h2>
+            {% endif %}
+            <p>Platform digital terbaik untuk kebutuhan bisnis Anda.</p>        
+        </div>
+    </section>
+
+    <div class="🤚">
+        <div class="👉"></div>
+        <div class="👉"></div>
+        <div class="👉"></div>
+        <div class="👉"></div>
+        <div class="🌴"></div>		
+        <div class="👍"></div>
+    </div>
+    
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <footer>
+        <p>Hak Cipta &copy; 2024 Peter Raymond</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maia Digital | Login</title>
+    <link href="{{ url_for('static', filename='css/login.css') }}" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="login-card">
+        <div class="card-header">
+            <h1>Login</h1>
+        </div>
+        <div class="card-body">
+            <form action="/login" method="POST">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required="">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required="">
+                    
+                </div>
+                <div class="form-group">
+                    <br>
+                    <button type="submit" class="login-button">Login</button>
+                    <br>
+                    <p>Don't Have an account? <a href="/register">Register Here</a></p>
+                </div>
+            </form>
+            <div class="notice" id="login-notice">
+        </div>
+    </div>
+
+    
+
+
+</body>
+</html>

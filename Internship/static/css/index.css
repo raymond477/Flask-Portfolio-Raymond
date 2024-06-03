@@ -1,0 +1,551 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Define the fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply the fade-in animation to specific elements */
+#home h2, #home p, .logo {
+    animation: fadeIn 1s ease forwards;
+}
+
+/* Define the bounce animation */
+@keyframes bounce {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+/* Apply the bounce animation on button hover */
+button:hover {
+    animation: bounce 0.5s ease;
+}
+
+
+/* Global Styles */
+body {
+    font-family: "Encode Sans", sans-serif;    margin-bottom: 10px;
+    font-size: 17.5px;
+    font-weight: 600;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 25px;
+}
+
+/* Header Styles */
+header {
+    background: linear-gradient(to right, #000000, #000000); /* Gradient background in purple */
+    color: #0066ff;
+    padding: 15px 15px;
+}
+
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 5px;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 270px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+/* Define the blink animation */
+@keyframes blink {
+    0% { opacity: 1; } /* Fully visible */
+    50% { opacity: 0; } /* Invisible */
+    100% { opacity: 1; } /* Fully visible */
+}
+
+/* Apply the blink animation on hover */
+.navbar li a:hover {
+    animation: blink 1s infinite; /* Apply the blink animation */
+    border-radius: 20px;
+    border-width: 20px;
+    padding: 3px 3px; /* Menambahkan padding untuk memperbesar tombol */
+
+}
+
+/* Tandai item navbar yang sedang aktif */
+.navbar li.active a {
+    background-color: #0066ff; /* Warna latar belakang untuk item aktif */
+    background-size: 210px;
+    color: #ffffff; /* Warna teks untuk item aktif */
+    /* Efek transisi */
+    transition: background-color 0.3s, color 0.3s;
+    /* Efek bayangan */
+    box-shadow: 10 22px 4px rgba(0, 0, 0, 0.1); /* Bayangan ringan */
+    border-radius: 90px;
+    width: 20px;
+    padding: 10px 10px; /* Menambahkan padding untuk memperbesar tombol */
+
+
+}
+
+/* Hover effect */
+.navbar li a:hover {
+    background-color: #0066ff; /* Warna latar belakang saat hover */
+    color: #ffffff; /* Warna teks saat hover */
+    /* Efek transisi */
+    transition: background-color 0.3s, color 0.3s;
+    /* Efek bayangan */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Bayangan lebih jelas saat hover */
+}
+
+/* Home Section Styles */
+#home {
+    background-color: #ffffff00;
+    font-family: "Encode Sans", sans-serif;    margin-bottom: 10px;
+    color: #000000;
+    text-shadow: #000000;
+    text-shadow: 10cm;
+    padding: 100px 0;
+    text-align: center;
+}
+
+#home h2 {
+    font-size: 58px;
+    margin-bottom: 33px;
+    text-align: left; /* Mengatur posisi teks menjadi kiri */
+    margin-right: 400px;
+    margin-left: -250px; /* Menyesuaikan margin kiri */
+    padding-right: 10%;
+}
+
+
+#home p {
+    font-size: 24px;
+    margin-bottom: 40px;
+    margin-bottom: 20px;
+    text-align: left; /* Mengatur posisi teks menjadi kiri */
+    margin-right: 400px;
+    margin-left: -250px; /* Menyesuaikan margin kiri */
+    padding-right: 10%;
+}
+
+.logo {
+    font-size: 28px;
+    font-family: "Encode Sans", sans-serif;    margin-bottom: 10px;
+    text-align: left; /* Mengatur posisi teks menjadi kiri */
+    margin-right: 400px;
+    margin-left: 40px; /* Menyesuaikan margin kiri */
+    padding-right: 10%;
+}
+
+.kecil {
+    font-size: 13px;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #000000;
+    color: #fff;
+    padding: 26px 0;
+    text-align: center;
+    position: relative;
+}
+
+button {
+    background: #0066ff;
+    font-family: inherit;
+    color: #ffffff;
+    padding: 0.6em 1.3em;
+    font-weight: 800;
+    font-size: 21px;
+    border: 3px solid black;
+    border-radius: 0.4em;
+    box-shadow: 0.1em 0.1em;
+    cursor: pointer;
+    float: left; 
+    margin-right: 20px; /* Add some space between the button and other elements */
+    margin-left: -250px; /* Adjust the button more to the left */
+}
+
+  button:hover {
+    transform: translate(-0.05em, -0.05em);
+    box-shadow: 0.15em 0.15em;
+  }
+  
+  button:active {
+    transform: translate(0.05em, 0.05em);
+    box-shadow: 0.05em 0.05em;
+  }
+  
+  .phoneContainer {
+    width: 225px;
+    height: 450px;
+    background-color: black;
+    border-radius: 20px;
+    position: absolute; /* Menggunakan fixed agar elemen tetap pada posisi tertentu saat menggulir halaman */
+    top: 150px; /* Ubah posisi ke atas */
+    right: 255px; /* Ubah posisi ke kanan */
+  }
+  
+  .screen {
+    width: 220px;
+    height: 440px;
+    background: rgb(255,196,196);
+    background: linear-gradient(167deg, rgba(255,196,196,1) 10%, rgba(45,138,253,1) 20%, rgba(34,193,195,1) 48%, rgba(211,216,255,1) 69%, rgba(0,164,24,1) 88%);
+    border-radius: 20px;
+    position: absolute;
+    top: 4px;
+    bottom: 2px;
+    right: 2px;
+    left: 2px;
+    box-sizing: border-box;
+  }
+  
+  .camera {
+    width: 80px;
+    background-color: black;
+    position: absolute;
+    height: 20px;
+    top: 4%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    border-radius: 25px;
+    transition: 0.3s;
+    animation-name: callTransition;
+    animation-duration: 1.9s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+  }
+  
+  @keyframes callTransition {
+    15% {
+      width: 40px;
+    }
+  
+    95% {
+      width: 95px;
+      background-color: darkblue;
+    }
+  }
+  
+  .camera:before {
+    content: "";
+    width: 15px;
+    height: 15px;
+    background-color: rgb(19, 19, 51);
+    position: absolute;
+    border-radius: 50%;
+    left: 5px;
+    top: 2px;
+  }
+  
+  .camera:after {
+    content: "";
+    width: 25px;
+    height: 5px;
+    background-color: lightgreen;
+    position: absolute;
+    border-radius: 50%;
+    right: 5px;
+    top: 6px;
+  }
+  
+  .appsContainer {
+    margin-top: 10px;
+    position: absolute;
+    right: 50%;
+    top: 40%;
+    transform: translate(50%, -50%);
+  }
+  
+  .widgets {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    box-sizing: border-box;
+  }
+  
+  .one, .two {
+    height: 80px;
+    width: 80px;
+    background-color: blue;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+  .two {
+    background-color: lightblue;
+  }
+  
+  .oneApp, .twoApp {
+    width: 35px;
+    height: 35px;
+    background-color: white;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+  
+  .apps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 15px;
+    margin-left: 5px;
+  }
+  
+  .menuBar {
+    display: flex;
+    border-radius: 20px;
+    position: absolute;
+    bottom: -70px;
+  }
+  
+  .menuBar .twoApp:not(:last-child) {
+    margin-right: 10px;
+  }
+  
+  .menuBar::before {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 13px;
+    background-color: lightgray;
+    border: none;
+    border-radius: 20px;
+    top: -5px;
+    right: 50%;
+    transform: translate(50%, -50%);
+  }
+  
+  .menuBar::before {
+    content: "°°°°°°";
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: bolder;
+    color: gray;
+  }
+
+  .e-card {
+    margin: 100px ;
+    background: transparent;
+    box-shadow: 0px 8px 28px -9px rgba(0,0,0,0.45);
+    position: relative;
+    width: 240px;
+    height: 330px;
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 200px;
+  }
+  
+  .wave {
+    position: absolute;
+    width: 540px;
+    height: 700px;
+    opacity: 0.6;
+    left: 0;
+    top: 0;
+    margin-left: -50%;
+    margin-top: -70%;
+    background: linear-gradient(744deg,#af40ff,#5b42f3 60%,#00ddeb);
+    margin-bottom: 200px;
+
+  }
+  
+  .icon {
+    width: 3em;
+    margin-top: -1em;
+    padding-bottom: 1em;
+  }
+  
+  .infotop {
+    text-align: center;
+    font-size: 20px;
+    position: absolute;
+    top: 5.6em;
+    left: 0;
+    right: 0;
+    color: rgb(255, 255, 255);
+    margin-bottom: 200px;
+
+    font-weight: 600;
+  }
+  
+  .name {
+    font-size: 14px;
+    font-weight: 100;
+    position: relative;
+    top: 1em;
+    text-transform: lowercase;
+  }
+  
+  .wave:nth-child(2),
+  .wave:nth-child(3) {
+    top: 210px;
+  }
+  
+  .playing .wave {
+    border-radius: 40%;
+    animation: wave 3000ms infinite linear;
+  }
+  
+  .wave {
+    border-radius: 40%;
+    animation: wave 55s infinite linear;
+  }
+  
+  .playing .wave:nth-child(2) {
+    animation-duration: 4000ms;
+  }
+  
+  .wave:nth-child(2) {
+    animation-duration: 50s;
+  }
+  
+  .playing .wave:nth-child(3) {
+    animation-duration: 5000ms;
+  }
+  
+  .wave:nth-child(3) {
+    animation-duration: 45s;
+  }
+  
+  @keyframes wave {
+    0% {
+      transform: rotate(0deg);
+    }
+  
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .bg {
+    width: 100%;
+    height: 100%;
+    background: lightblue;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .bg::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, #3498db 10%, transparent 20%),
+      radial-gradient(circle, transparent 10%, #3498db 20%);
+    background-size: 30px 30px; /* Adjust the size of the pattern */
+    animation: moveBackground 8s linear infinite; /* Adjust the animation duration and timing function */
+  }
+  
+  @keyframes moveBackground {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(20%, 20%);
+    }
+  }
+  
+  .color-bg {
+    position: absolute;
+    width: 100%;
+    height: 68%;
+    background: linear-gradient(to bottom, #008cff, #effcff); /* Gradasi warna dari ungu ke biru */
+    top: calc(79% + 10px); /* Mengatur posisi vertikal 20px di bawah tengah */
+    z-index: -1; /* Mengatur z-index agar elemen berada di belakang */
+
+}
+
+.card {
+  position: absolute;
+  bottom: 5px;
+  left: 510%;
+  transform: translateX(-50%);
+  width: 190px;
+  height: 254px;
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  padding: 112px;
+  gap: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: white;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  left: -5px;
+  margin: auto;
+  width: 200px;
+  height: 264px;
+  border-radius: 10px;
+  background: linear-gradient(-45deg, #e81cff 0%, #40c9ff 100%);
+  z-index: -10;
+  pointer-events: none;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(-45deg, #fc00ff 0%, #00dbde 100%);
+  transform: translate3d(0, 0, 0) scale(0.95);
+  filter: blur(20px);
+}
+
+.heading {
+  font-size: 20px;
+  text-transform: capitalize;
+  font-weight: 700;
+}
+
+.card p:not(.heading) {
+  font-size: 14px;
+}
+
+.card p:last-child {
+  color: #e81cff;
+  font-weight: 600;
+}
+
+.card:hover::after {
+  filter: blur(30px);
+}
+
+.card:hover::before {
+  transform: rotate(-90deg) scaleX(1.34) scaleY(0.77);
+}
+
